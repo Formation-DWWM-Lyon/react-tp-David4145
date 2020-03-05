@@ -1,5 +1,18 @@
 import React, { Component } from 'react';
 
+
+const ListItem = ({ name, url }) => {
+  const [match, ressource, id] = parseSwapiUrl(url);
+
+  return (
+    <ListGroup.Item>
+      <Link to={''} >
+        {name}
+      </Link>
+    </ListGroup.Item>
+  )
+}
+
 export default class DataContainer extends Component {
   state = {
     data: null

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Card, ListGroup } from 'react-bootstrap';
 
-const Profile = ({name, street,email}) =>
+const Profile = ({ name, street, email, picture, gender }) =>
   <Card>
     <Card.Header as="h3">
       <Card.Title>
-{name}
+        {name}
       </Card.Title>
     </Card.Header>
     <Card.Body>
@@ -13,7 +13,9 @@ const Profile = ({name, street,email}) =>
     </Card.Body>
     <ListGroup variant="flush">
       <ListGroup.Item>{street}</ListGroup.Item>
-<ListGroup.Item>{email}</ListGroup.Item>
+      <ListGroup.Item>{email}</ListGroup.Item>
+      <ListGroup.Item>{picture}</ListGroup.Item>
+      <ListGroup.Item>{gender}</ListGroup.Item>
     </ListGroup>
     <Card.Footer>
       <small className="text-muted">
